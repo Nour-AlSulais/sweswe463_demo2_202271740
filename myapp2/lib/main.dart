@@ -41,34 +41,53 @@
 //2. Why can `dynamic` change from `String` to `int`?
 //turns off compile-time type checking.
 
-import 'dart:collection';
+// import 'dart:collection';
 
-void greet(String name, String greeting) {
-  print('$greeting, $name!');
-}
+// void greet(String name, String greeting) {
+//   print('$greeting, $name!');
+// }
 
-void greetWelcome(String name, [String greeting = 'Welcome']) {
-  print('$greeting, $name!');
-}
+// void greetWelcome(String name, [String greeting = 'Welcome']) {
+//   print('$greeting, $name!');
+// }
 
-void greetAgain({required String name, String? greeting}) {
-  print('${greeting ?? 'Hi'}, $name!');
-}
+// void greetAgain({required String name, String? greeting}) {
+//   print('${greeting ?? 'Hi'}, $name!');
+// }
 
-void main() {
-  greet('Nour', 'Hello');
-  greet('Nour', 'Good morning');
+// void main() {
+//   greet('Nour', 'Hello');
+//   greet('Nour', 'Good morning');
 
-  greetWelcome('Nour');
-  greetWelcome('Nour', 'Good morning');
-  greetWelcome( 'Nour', 'Welcome back');
-  greetAgain(name: 'Nour', greeting: 'Hello');
-  greetAgain(name: 'Nour', greeting: 'Good morning');
-  greetAgain(name: 'Nour');
+//   greetWelcome('Nour');
+//   greetWelcome('Nour', 'Good morning');
+//   greetWelcome( 'Nour', 'Welcome back');
+//   greetAgain(name: 'Nour', greeting: 'Hello');
+//   greetAgain(name: 'Nour', greeting: 'Good morning');
+//   greetAgain(name: 'Nour');
+//   greetAgain(name: 'Nour Al Sulais');
 
-}
+// }
 // greet('Nour', 'Hello'); is Positional parameters
 // greetWelcome('Nour'); is Optional positional parameters
 // greetAgain(name: 'Nour', greeting: 'Hello'); is Named parameters
 
 
+void performOperation(
+  int a,
+  int b,
+  int Function(int, int) operation,
+) {
+  print(operation(a, b));
+}
+
+int add(int a, int b) => a + b;
+int subtract(int a, int b) => a - b;
+int multiply(int a, int b) => a * b;
+
+
+void main() {
+  performOperation(10, 5, add);
+  performOperation(10, 5, subtract);
+  performOperation(10, 5, multiply);
+}
