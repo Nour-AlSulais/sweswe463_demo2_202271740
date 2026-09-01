@@ -41,6 +41,8 @@
 //2. Why can `dynamic` change from `String` to `int`?
 //turns off compile-time type checking.
 
+
+// Task 3
 // import 'dart:collection';
 
 // void greet(String name, String greeting) {
@@ -73,21 +75,52 @@
 // greetAgain(name: 'Nour', greeting: 'Hello'); is Named parameters
 
 
-void performOperation(
-  int a,
-  int b,
-  int Function(int, int) operation,
-) {
-  print(operation(a, b));
-}
+// void performOperation(
+//   int a,
+//   int b,
+//   int Function(int, int) operation,
+// ) {
+//   print(operation(a, b));
+// }
 
-int add(int a, int b) => a + b;
-int subtract(int a, int b) => a - b;
-int multiply(int a, int b) => a * b;
+// int add(int a, int b) => a + b;
+// int subtract(int a, int b) => a - b;
+// int multiply(int a, int b) => a * b;
+
+
+// void main() {
+//   performOperation(10, 5, add);
+//   performOperation(10, 5, subtract);
+//   performOperation(10, 5, multiply);
+// }
+
+
+// Task 4
+// void main() {
+//   var fruitsList = ['apples', 'oranges', 'bananas', 'grapes'];
+//   var grades = {'quiz1': 85, 'quiz2': 92, 'quiz3': 100};
+//   var tags = {'dart', 'flutter', 'mobile', 'flutter', 'dart'};
+
+
+//   print(fruitsList[1]);
+//   print(grades['quiz2']);
+//   print(tags);
+// }
+// why the duplicate set item is not stored twice.
+// Because sets are unordered collections of unique items, so duplicate items are not allowed.
 
 
 void main() {
-  performOperation(10, 5, add);
-  performOperation(10, 5, subtract);
-  performOperation(10, 5, multiply);
+  List<String> fruitsList = [];
+  List<String> moreFruits = ['grape', 'kiwi', 'mango'];
+
+  List<String> allFruits = [
+    'watermelon',
+    if (fruitsList.isNotEmpty) ...fruitsList,
+    for (var fruit in moreFruits) fruit,
+  ];
+
+  print(allFruits);
 }
+//Explain what the spread operator ... does.
+//The spread operator `...` in Dart is used to insert all the elements of a collection (like a list or set) into another collection.
