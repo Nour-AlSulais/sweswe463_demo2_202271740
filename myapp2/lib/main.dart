@@ -92,15 +92,15 @@
 // }
 
 // Task 4
-// void main() {
-//   var fruitsList = ['apples', 'oranges', 'bananas', 'grapes'];
-//   var grades = {'quiz1': 85, 'quiz2': 92, 'quiz3': 100};
-//   var tags = {'dart', 'flutter', 'mobile', 'flutter', 'dart'};
+void main() {
+  var fruitsList = ['apples', 'oranges', 'bananas', 'grapes'];
+  var grades = {'quiz1': 85, 'quiz2': 92, 'quiz3': 100};
+  var tags = {'dart', 'flutter', 'mobile', 'flutter', 'dart'};
 
-//   print(fruitsList[1]);
-//   print(grades['quiz2']);
-//   print(tags);
-// }
+  print(fruitsList[1]);
+  print(grades['quiz2']);
+  print(tags);
+}
 // why the duplicate set item is not stored twice.
 // Because sets are unordered collections of unique items, so duplicate items are not allowed.
 
@@ -370,63 +370,63 @@
 //task 9
 
 
-import 'package:flutter/material.dart';                       // 1
+// import 'package:flutter/material.dart';                       // 1
 
-void main() => runApp(const MyApp());                       // 3
+// void main() => runApp(const MyApp());                       // 3
 
-class MyApp extends StatelessWidget {                       // 5
-  const MyApp({super.key});                                 // 6
+// class MyApp extends StatelessWidget {                       // 5
+//   const MyApp({super.key});                                 // 6
 
-  @override                                                  // 8
-  Widget build(BuildContext context) {                      // 9
-    return const MaterialApp(                               // 10
-      home: MyHomePage(title: 'Flutter Demo'),              // 11
-    );                                                       // 12
-  }                                                          // 13
-}                                                            // 14
+//   @override                                                  // 8
+//   Widget build(BuildContext context) {                      // 9
+//     return const MaterialApp(                               // 10
+//       home: MyHomePage(title: 'Flutter Demo'),              // 11
+//     );                                                       // 12
+//   }                                                          // 13
+// }                                                            // 14
 
-class MyHomePage extends StatefulWidget {                   // 16
-  const MyHomePage({super.key, required this.title});       // 17
+// class MyHomePage extends StatefulWidget {                   // 16
+//   const MyHomePage({super.key, required this.title});       // 17
 
-  final String title;                                       // 19
+//   final String title;                                       // 19
 
-  @override                                                  // 21
-  State<MyHomePage> createState() => _MyHomePageState();    // 22
-}                                                            // 23
+//   @override                                                  // 21
+//   State<MyHomePage> createState() => _MyHomePageState();    // 22
+// }                                                            // 23
 
-class _MyHomePageState extends State<MyHomePage> {          // 25
-  int _counter = 0;                                         // 26
-  String? message;                                          // 27
+// class _MyHomePageState extends State<MyHomePage> {          // 25
+//   int _counter = 0;                                         // 26
+//   String? message;                                          // 27
 
-  void _incrementCounter() {                                // 29
-    setState(() {                                           // 30
-      _counter++;                                           // 31
-      message = 'Button pressed';                           // 32
-    });                                                      // 33
-  }                                                          // 34
+//   void _incrementCounter() {                                // 29
+//     setState(() {                                           // 30
+//       _counter++;                                           // 31
+//       message = 'Button pressed';                           // 32
+//     });                                                      // 33
+//   }                                                          // 34
 
-  @override                                                  // 36
-  Widget build(BuildContext context) {                      // 37
-    return Scaffold(                                        // 38
-      appBar: AppBar(                                       // 39
-        title: Text(widget.title),                          // 40
-      ),                                                     // 41
-      body: Center(                                         // 42
-        child: Column(                                      // 43
-          mainAxisAlignment: MainAxisAlignment.center,      // 44
-          children: <Widget>[                               // 45
-            Text('Count: $_counter'),                       // 46
-            Text(message ?? 'Press the button'),            // 47
-          ],                                                 // 48
-        ),                                                   // 49
-      ),                                                     // 50
-      floatingActionButton: FloatingActionButton(           // 51
-        onPressed: _incrementCounter,                       // 52
-        child: const Icon(Icons.add),                       // 53
-      ),                                                     // 54
-    );                                                       // 55
-  }                                                          // 56
-}                 
+//   @override                                                  // 36
+//   Widget build(BuildContext context) {                      // 37
+//     return Scaffold(                                        // 38
+//       appBar: AppBar(                                       // 39
+//         title: Text(widget.title),                          // 40
+//       ),                                                     // 41
+//       body: Center(                                         // 42
+//         child: Column(                                      // 43
+//           mainAxisAlignment: MainAxisAlignment.center,      // 44
+//           children: <Widget>[                               // 45
+//             Text('Count: $_counter'),                       // 46
+//             Text(message ?? 'Press the button'),            // 47
+//           ],                                                 // 48
+//         ),                                                   // 49
+//       ),                                                     // 50
+//       floatingActionButton: FloatingActionButton(           // 51
+//         onPressed: _incrementCounter,                       // 52
+//         child: const Icon(Icons.add),                       // 53
+//       ),                                                     // 54
+//     );                                                       // 55
+//   }                                                          // 56
+// }                 
 
                                            // 57
 /*
@@ -442,6 +442,5 @@ class _MyHomePageState extends State<MyHomePage> {          // 25
   Generics                           | 22, 25, 45
   Private members                    | 22, 25, 26, 29, 31, 46, 52
   Null safety                        | 27, 47
-  Collections                        | 45-48
-
+  Collections                        | 45,46, 47,48,
 */
